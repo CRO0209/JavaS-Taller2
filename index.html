@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Registro de Actividades</title>
+    <link rel="stylesheet" type="text/css" href="estilos.css">
+</head>
+
+<body>
+    <h1>Registro de Actividades</h1>
+    <form id="actividadForm">
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" name="descripcion" required>
+
+        <label for="dias">Cantidad de días:</label>
+        <input type="number" id="dias" name="dias" required>
+
+        <label for="fechaInicio">Fecha de inicio:</label>
+        <input type="date" id="fechaInicio" name="fechaInicio" required>
+
+        <label for="fechaFin">Fecha de fin:</label>
+        <input type="date" id="fechaFin" name="fechaFin" required>
+
+        <label for="responsable">Responsable de la actividad:</label>
+        <input type="text" id="responsable" name="responsable" required>
+
+        <button type="submit">Registrar</button>
+    </form>
+
+    <h2>Consultar Registros</h2>
+    <div id="registros"></div>
+
+    <h2>Modificar Registro</h2>
+    <form id=" formulario-modificar">
+        <input type="number" id="id-M" name="id" placeholder="ID del Registro a Modificar">
+        <input type="text" id="descripcion-M" name="descripcion" placeholder="Descripción">
+        <input type="number" id="dias-M" name="dias" placeholder="Días">
+        <input type="date" id="fechaInicio-M" name="fechaInicio" placeholder="Fecha de inicio">
+        <input type="date" id="fechaFin-M" name="fechaFin" placeholder="Fecha de fin">
+        <input type="text" id="responsable-M" name="responsable" placeholder="Responsable">
+        <button type="button" onclick="modificarRegistro()">Modificar</button>
+    </form>
+
+    <h2>Eliminar Registro</h2>
+    <form id="formulario-eliminar">
+        <input type="number" id="id-Eliminar" name="id" placeholder="ID del Registro a Eliminar">
+        <button type="button" onclick="eliminarRegistro()">Eliminar</button>
+    </form>
+
+    <script src="scripts.js">
+    </script>
+</body>
+
+</html>
